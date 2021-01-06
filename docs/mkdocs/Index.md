@@ -21,4 +21,7 @@ Project layout:
 
 ## Deploy
 
+```buildoutcfg
+mkdocs gh-deploy --force
+```
 
