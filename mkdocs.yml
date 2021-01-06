@@ -1,6 +1,6 @@
 site_name: QMETA-MD-DOCSTIE
 site_description: A Template Repo to build help documents
-pags:
+pages:
   - 主页：README.md
   - mkdocs:
     - "mkdocs-tip" : 'mkdocs/index.md'
