@@ -31,5 +31,5 @@ have fun!
  - [TestNG基础](http://www.jianshu.com/p/d430c78016e6)
  - [Selenium/WebDriver](https://github.com/fool2fish/selenium-doc/blob/master/official-site/selenium-web-driver.md)
 
-![img](../pics/JAVA_BASIC.png)
+![img](pics/JAVA_BASIC.png)
 
