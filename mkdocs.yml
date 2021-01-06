@@ -1,0 +1,15 @@
+site_name: QMETA-MD-DOCSTIE
+site_description: A Template Repo to build help documents
+pags:
+  - 主页：README.md
+  - mkdocs:
+    - "mkdocs-tip" : 'mkdocs/index.md'
+
+theme:
+  name: 'material'
+  custom_dir: 'docs/theme'
+  palette:
+    primary: pink
+    accent: pink
+  logo:  'assets/logo.png'
+  favicon: 'assets/favicon.png'
