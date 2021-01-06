@@ -64,6 +64,6 @@ theme:
   palette:
     primary: pink
     accent: pink
-  logo: 'logo-white.svg'
-  favicon: 'favicon.png'
+  logo: 'assets/logo.svg'
+  favicon: 'assets/favicon.png'
 # theme: Cosmo
