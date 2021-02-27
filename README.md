@@ -7,6 +7,16 @@ Demo sites: [automation sites](https://qdriven.github.io/qmeta-md-docsites/)
 
 This Demo Site is a Test Framework Site 5 years ago, It is still good enough to run some tests.
 
+## Slides
+### Personal Slides
+
+- [Shell4QA](./slides/shell4qa.html.pdf)
+
+### Reports:
+
+- [TestAutomation-Tools](./slides/Test_Automation_Tools_Report.pdf)
+- [gitkraken-devops-report](./slides/gitkraken-devops-report-2020.pdf)
+
 
 ## TO DO List
 
