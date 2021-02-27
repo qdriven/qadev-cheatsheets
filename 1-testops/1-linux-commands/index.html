@@ -1,0 +1,1524 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="自动化测试文档中心">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Linux Commands - 自动化测试</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#e92063">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="pink" data-md-color-accent="pink">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="自动化测试" class="md-header__button md-logo" aria-label="自动化测试">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            自动化测试
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/qdriven/qmeta-md-docsites/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qdriven/qmeta-md-docsites
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="自动化测试" class="md-nav__button md-logo" aria-label="自动化测试">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    自动化测试
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/qdriven/qmeta-md-docsites/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qdriven/qmeta-md-docsites
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        QuickStart
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="QuickStart" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          QuickStart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/project_structure/" class="md-nav__link">
+        项目结构和配置
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/selenium_in_a_wild_way/" class="md-nav__link">
+        WEB页面自动化-SELENIUM管理页面元素
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/webui_automation_quickstart/" class="md-nav__link">
+        WEB页面自动化-开始
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/webui_automation_realexample/" class="md-nav__link">
+        WEB页面自动化-真实用例
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/APIAutomation/" class="md-nav__link">
+        API 自动化测试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/api_testing_qa/" class="md-nav__link">
+        API 自动化测试常见问题
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity_automation/activity_automation_defined_employees/" class="md-nav__link">
+        工作流测试之指定审批节点
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity_automation/activity_automation_dynamic/" class="md-nav__link">
+        工作流测试之动态审批节点
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        自动化测试模块介绍
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="自动化测试模块介绍" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          自动化测试模块介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/automation-purpose/" class="md-nav__link">
+        目的
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/automation-framework-impl/" class="md-nav__link">
+        基本模块的作用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/self_defined_elements/" class="md-nav__link">
+        页面自动化-页面元素的使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/element_handler/" class="md-nav__link">
+        页面自动化-页面元素方法查询
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/pageobject_codegenerator/" class="md-nav__link">
+        页面自动化-页面代码生成
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/build_test/" class="md-nav__link">
+        页面自动化-WebTestActionBuilder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        接口自动化测试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="接口自动化测试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          接口自动化测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/web%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+        接口测试－WEB接口常见的实现方法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/APIAutomation/" class="md-nav__link">
+        API 自动化测试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/API%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        API自动化测试-进阶
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Tips
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tips" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tips
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebTest_Debug/" class="md-nav__link">
+        WebUI Debug
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/find_by_ref/" class="md-nav__link">
+        FindByRef annotation  使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/verification_annotation/" class="md-nav__link">
+        verification 注解使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/code_style/" class="md-nav__link">
+        JAVA 自动化测试代码规范
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/simple_ui_case/" class="md-nav__link">
+        一个简单测试用例的自动化实例
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/Database/" class="md-nav__link">
+        数据库操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/testng-xml-configuration/" class="md-nav__link">
+        TestNG 测试XML配置
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/use_own_password/" class="md-nav__link">
+        使用自己的用户名和密码获取万能密码
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/JsonHelper/" class="md-nav__link">
+        JSON处理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/page_object/" class="md-nav__link">
+        Page Object/Page Factory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/TreeElement/" class="md-nav__link">
+        TreeElement 使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebDriverHelper/" class="md-nav__link">
+        添加了Expectation的WebDriver操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebDriver%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        WebDriver原生操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/how_to_write_teststeps/" class="md-nav__link">
+        编写测试步骤的不同方法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/repeatable_elements/" class="md-nav__link">
+        重复填写控件使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/StateElementReferneceException/" class="md-nav__link">
+        StateElementReferneceException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/DateHelper/" class="md-nav__link">
+        DateHelper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/database_assetion/" class="md-nav__link">
+        数据库验证
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/database_update/" class="md-nav__link">
+        预设条件数据的更新和回滚
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/testng_faq/" class="md-nav__link">
+        TestNG测试常见问题
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/simplest_testngreport/" class="md-nav__link">
+        TestNG 定制报表简单原理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/PageFactory/" class="md-nav__link">
+        Page Factory 模式原理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/random_data/" class="md-nav__link">
+        随机数据
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/data_construct_by_context/" class="md-nav__link">
+        动态测试数据构建
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Git
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git_basic/" class="md-nav__link">
+        Git 基础
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    用户提示符号
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux3264" class="md-nav__link">
+    如何确认linux是32位还是64位
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    如何获取linux 版本信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    如何获取命令帮助
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#home" class="md-nav__link">
+    如何回到home目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    如何获取命令运行了多长时间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    获取命令所在位置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#type-command-to-check-built-in-or-external-command" class="md-nav__link">
+    type command to check built-in or external command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-see-the-executed-command-history-history" class="md-nav__link">
+    To see the executed command history: history
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-execute-23rd-command-23" class="md-nav__link">
+    To execute 23rd command: $ !23
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-execute-last-command" class="md-nav__link">
+    To execute last command: $ !!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-edit-history-command-by-number-opens-in-vi-fc-12" class="md-nav__link">
+    To edit history command by number, opens in VI: $ fc 12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-runs-the-most-recent-command-that-contains-a-particular-string-of-characters-string" class="md-nav__link">
+    To runs the most recent command that contains a particular string of characters: $ !?string?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-show-current-user" class="md-nav__link">
+    To show current user:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hostname" class="md-nav__link">
+    获取hostname
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls-command" class="md-nav__link">
+    ls command:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date" class="md-nav__link">
+    date
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-all-aliases-alias" class="md-nav__link">
+    List all aliases: alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal" class="md-nav__link">
+    Terminal 快捷键
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias" class="md-nav__link">
+    配置Alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch-command" class="md-nav__link">
+    touch command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ls-command_1" class="md-nav__link">
+    ls command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions 权限管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-file-ownership" class="md-nav__link">
+    Changing file ownership
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-change-group-as-well" class="md-nav__link">
+    To change group as well
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-copying-and-removing-files" class="md-nav__link">
+    Moving, Copying, and Removing Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim" class="md-nav__link">
+    VIM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-command" class="md-nav__link">
+    find command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-files-by-size" class="md-nav__link">
+    Finding files by size
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-files-by-user" class="md-nav__link">
+    Finding files by user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-files-by-permission" class="md-nav__link">
+    Finding files by permission
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-files-by-date-and-time" class="md-nav__link">
+    Finding files by date and time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grep-command" class="md-nav__link">
+    grep command
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-password-less-login" class="md-nav__link">
+    SSH Password-less login
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+  
+  
+    <div id="bsa-cpc"></div>
+  
+  
+                
+                  <a href="https://qdriven.github.io/qmeta-md-docsites/1-testops/1-linux-commands.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="linux-commands">Linux Commands</h1>
+<h2 id="_1">用户提示符号</h2>
+<p>默认用户的提示符号 
+- regular user is <strong>$</strong>
+- root user is <strong>#</strong></p>
+<p>观察如下内容可以知道差别：</p>
+<pre><code class="language-shell"># Patrick @Min ~ [11:07:30]
+$ sudo -i
+Password:
+Sorry, try again.
+Password:
+# ~ root#
+</code></pre>
+<h2 id="linux3264">如何确认linux是32位还是64位</h2>
+<p>使用如下命令:</p>
+<p><code>uname -m</code></p>
+<pre><code>x86_64 ==&gt; 64-bit kernel
+i686   ==&gt; 32-bit kernel
+</code></pre>
+<h2 id="linux">如何获取linux 版本信息</h2>
+<p><code>uname -a</code></p>
+<pre><code>Linux localhost.localdomain 4.5.7-300.fc24.x86_64 #1 SMP Wed Jun 8 18:12:45 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
+<h2 id="_2">如何获取命令帮助</h2>
+<pre><code class="language-shell">    man pwd
+    info pwd
+    help pwd
+</code></pre>
+<h2 id="home">如何回到home目录</h2>
+<p><code>cd ~</code></p>
+<h2 id="_3">如何获取命令运行了多长时间</h2>
+<p>How much time it took to execute the command: <code>time pwd</code></p>
+<h2 id="_4">获取命令所在位置</h2>
+<p>To find out where a particular command is taken from: <code>type bash</code></p>
+<pre><code>$ type bash
+bash is /bin/bash
+</code></pre>
+<h2 id="type-command-to-check-built-in-or-external-command"><strong>type</strong> command to check built-in or external command</h2>
+<pre><code>$ type pwd
+pwd is a shell builtin
+
+$ type bash
+bash is /bin/bash
+</code></pre>
+<h2 id="to-see-the-executed-command-history-history">To see the executed command history: <code>history</code></h2>
+<p>使用如下操作可以获取某个命令历史使用:</p>
+<pre><code class="language-shell">history | grep &lt;comand_name&gt;
+</code></pre>
+<h2 id="to-execute-23rd-command-23">To execute 23rd command: <code>$ !23</code></h2>
+<h2 id="to-execute-last-command">To execute last command: <code>$ !!</code></h2>
+<h2 id="to-edit-history-command-by-number-opens-in-vi-fc-12">To edit history command by number, opens in VI: <code>$ fc 12</code></h2>
+<h2 id="to-runs-the-most-recent-command-that-contains-a-particular-string-of-characters-string">To runs the most recent command that contains a particular string of characters: <code>$ !?string?</code></h2>
+<h2 id="to-show-current-user">To show current user:</h2>
+<p><code>who am i</code></p>
+<pre><code class="language-shell">~$: who am i
+Patrick  ttys006  Feb 25 11:07
+</code></pre>
+<h2 id="hostname">获取hostname</h2>
+<p><code>hostname</code>
+    P-local</p>
+<h2 id="ls-command">ls command:</h2>
+<pre><code>    $ ls -al
+    $ ls --help
+    $ ls --hide=Desktop
+</code></pre>
+<h2 id="date"><code>date</code></h2>
+<pre><code>Mon Aug 22 10:33:50 IST 2016
+</code></pre>
+<p>data + 格式：</p>
+<p><code>$ date +'%d/%m/%y'</code></p>
+<pre><code>22/08/16
+</code></pre>
+<p><code>$ date +'%A, %B %d, %Y'</code></p>
+<pre><code>Tuesday, October 21, 2014
+</code></pre>
+<p><code>date --help</code></p>
+<h2 id="id"><code>id</code></h2>
+<pre><code>uid=1000(siva) gid=1000(siva) groups=1000(siva),10(wheel) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+</code></pre>
+<p>See which users logged into the system currently</p>
+<p><code>who -uH</code></p>
+<pre><code class="language-shell">USER     LINE     WHEN         IDLE        PID  COMMENT
+Patrick  console  Feb 24 15:43 19:41       133
+Patrick  ttys000  Feb 24 15:43 00:16       493
+Patrick  ttys002  Feb 24 19:21 00:16      2349
+Patrick  ttys003  Feb 24 19:22 00:16      2585
+Patrick  ttys004  Feb 25 10:31 00:16      4088
+Patrick  ttys006  Feb 25 11:07   .        5835
+</code></pre>
+<h2 id="list-all-aliases-alias">List all aliases: <code>alias</code></h2>
+<p>If a command is not in your PATH variable: <code>locate chage</code></p>
+<h2 id="terminal">Terminal 快捷键</h2>
+<pre><code>Alt+F =&gt; Word forward Go forward one word.
+Alt+B =&gt; Word backward Go backward one word.
+Ctrl+A =&gt; Beginning of line Go to the beginning of the current line.
+Ctrl+E =&gt; End of line Go to the end of the line.
+Ctrl+L =&gt; Clear screen Clear screen and leave line at the top of the screen.
+
+Alt+U =&gt; Uppercase word Change the current word to uppercase.
+Alt+L =&gt; Lowercase word Change the current word to lowercase.
+Alt+C =&gt; Capitalize word Change the current word to an initial capital
+</code></pre>
+<h2 id="alias">配置Alias</h2>
+<pre><code class="language-bash">alias sai='sudo apt-get install'
+unalias sai
+</code></pre>
+<p>或者可以在<code>.bashrc</code>等文件中设置alias：</p>
+<p>For all users</p>
+<pre><code>/etc/profile
+/etc/bashrc
+</code></pre>
+<p>User specific config files</p>
+<pre><code>~/.bash_profile
+~/.bashrc
+~/.bash_logout
+</code></pre>
+<p>To reload config file: <code>$ source ~/.bashrc</code></p>
+<h2 id="touch-command">touch command</h2>
+<pre><code>$ touch memo{1,2,3,4,5}
+$ ls
+memo1 memo2 memo3 memo4 memo5
+
+$ touch {John,Bill,Sally}-{Breakfast,Lunch,Dinner}
+$ ls
+Bill-Breakfast Bill-Lunch John-Dinner Sally-Breakfast Sally-Lunch
+Bill-Dinner John-Breakfast John-Lunch Sally-Dinner
+
+$ rm -f {John,Bill,Sally}-{Breakfast,Lunch,Dinner}
+
+$ touch {a..f}{1..5}
+$ ls
+a1 a3 a5 b2 b4 c1 c3 c5 d2 d4 e1 e3 e5 f2 f4
+a2 a4 b1 b3 b5 c2 c4 d1 d3 d5 e2 e4 f1 f3 f5
+</code></pre>
+<h2 id="ls-command_1">ls command</h2>
+<pre><code>ls -l
+total 4
+-rw-rw-r--. 1 joe joe 0 Dec 18 13:38 apple
+lrwxrwxrwx. 1 joe joe 5 Dec 18 13:46 pointer_to_apple -&gt; apple
+-rwxr-xr-x. 1 joe joe 0 Dec 18 13:37 scriptx.sh
+</code></pre>
+<p>To show hidden and non-hidden files:: <code>ls -a</code></p>
+<p>To list all files by time most recently modified: <code>ls -at</code></p>
+<p>To list files and append file-type indicators: <code>ls -F</code></p>
+<p><code>ls --hide=g*</code></p>
+<p><code>ls -ld $HOME/test/</code></p>
+<p>To list all files and directories recursively from current directory down: <code>ls -R</code></p>
+<p>To list files by size: <code>ls -S</code></p>
+<h2 id="permissions">Permissions 权限管理</h2>
+<p>First character of permission:</p>
+<pre><code>hyphen (-) : a regular file
+d : a directory
+l ( lowercase L) : a symbolic link
+b (for a block device)
+c (for a character device)
+s (for a socket)
+p (for a named pipe)
+x: an executable file (a script or binary file that runs as a command)
+</code></pre>
+<p>Changing permissions with chmod (numbers)</p>
+<p>each permission (read, write, and execute) is assigned a number</p>
+<p>r=4, w=2, and x=1</p>
+<p>For example, to make permissions wide open for yourself as owner, 
+you would set the first number to 7 (4+2+1), and then you would give the group and others read-only
+permission by setting both the second and third numbers to 4 (4+0+0), so that the final
+number is 744.</p>
+<pre><code># chmod 777 file -&gt; rwxrwxrwx
+# chmod 755 file -&gt; rwxr-xr-x
+# chmod 644 file -&gt; rw-r--r-
+# chmod 000 file -&gt; ---------
+</code></pre>
+<p>All files and directories below, and including, the myapps directory</p>
+<pre><code>chmod -R 755 $HOME/myapps
+</code></pre>
+<p>Changing permissions with chmod (letters)</p>
+<p>user (u), group (g), other (o),all users (a).
+read (r), write (w), and execute (x)</p>
+<p>Current : (rwxrwxrwx).</p>
+<pre><code>chmod a-w file -&gt; r-xr-xr-x
+chmod o-x file -&gt; rwxrwxrw-
+chmod go-rwx file -&gt; rwx------
+</code></pre>
+<p>Current: (---------).</p>
+<pre><code>chmod u+rw files -&gt; rw-------
+chmod a+x files -&gt; --x--x--x
+chmod ug+rx files -&gt; r-xr-x---
+chmod -R o-w $HOME/myapps
+</code></pre>
+<h2 id="changing-file-ownership">Changing file ownership</h2>
+<pre><code># chown joe /home/joe/memo.txt
+ls -l /home/joe/memo.txt
+-rw-r--r--. 1 joe root 0 Dec 19 11:23 /home/joe/memo.txt
+</code></pre>
+<h2 id="to-change-group-as-well">To change group as well</h2>
+<pre><code># chown joe:joe /home/joe/memo.txt
+# ls -l /home/joe/memo.txt
+-rw-r--r--. 1 joe joe 0 Dec 19 11:23 /home/joe/memo.txt
+
+# chown -R joe:joe /media/myusb
+</code></pre>
+<h2 id="moving-copying-and-removing-files">Moving, Copying, and Removing Files</h2>
+<pre><code>$ mv abc def
+$ mv abc ~
+$ mv /home/joe/mymemos/ /home/joe/Documents/
+
+
+$ cp abc def
+$ cp abc ~
+$ cp -r /usr/share/doc/bash-completion* /tmp/a/
+$ cp -ra /usr/share/doc/bash-completion* /tmp/b/
+
+$ rm abc
+$ rm *
+$ rmdir /home/joe/nothing/
+$ rm -r /home/joe/bigdir/
+$ rm -rf /home/joe/hugedir/
+</code></pre>
+<p>++ The backslash causes any command to run unaliased.</p>
+<pre><code>\rm bigdir
+</code></pre>
+<h2 id="vim">VIM</h2>
+<pre><code>0 (zero) — Moves the cursor to the beginning of the current line.
+$ Moves the cursor to the end of the current line.
+
+ZZ — Saves the current changes to the file and exits from vi.
+:w — Saves the current file but doesn't exit from vi.
+:wq — Works the same as ZZ.
+:q — Quits the current file. This works only if you don’t have any unsaved changes.
+:q! — Quits the current file and doesn’t save the changes you just made to the file.
+</code></pre>
+<p><code>$ locate .bashrc</code></p>
+<pre><code>/etc/skel/.bashrc
+/home/cnegus/.bashrc
+</code></pre>
+<p><code># locate .bashrc</code></p>
+<pre><code>/etc/skel/.bashrc
+/home/bill/.bashrc
+/home/joe/.bashrc
+/root/.bashrc
+</code></pre>
+<h2 id="find-command">find command</h2>
+<p><code># find /etc -name passwd</code></p>
+<pre><code>/etc/pam.d/passwd
+/etc/passwd
+</code></pre>
+<p><code># find /etc -iname '*passwd*'</code></p>
+<pre><code>/etc/pam.d/passwd
+/etc/passwd-
+/etc/passwd.OLD
+/etc/passwd
+/etc/MYPASSWD
+/etc/security/opasswd
+</code></pre>
+<h2 id="finding-files-by-size">Finding files by size</h2>
+<pre><code>$ find /usr/share/ -size +10M
+$ find /mostlybig -size -1M
+$ find /bigdata -size +500M -size -5G -exec du -sh {} \;
+4.1G /bigdata/images/rhel6.img
+606M /bigdata/Fedora-16-i686-Live-Desktop.iso
+560M /bigdata/dance2.avi
+</code></pre>
+<h2 id="finding-files-by-user">Finding files by user</h2>
+<pre><code>$ find /home -user chris -ls
+# find /home -user chris -or -user joe -ls
+# find /etc -group ntp -ls
+# find /var/spool -not -user root -ls
+</code></pre>
+<h2 id="finding-files-by-permission">Finding files by permission</h2>
+<pre><code>$ find /bin -perm 755 -ls
+$ find /home/chris/ -perm -222 -type d -ls
+$ find /myreadonly -perm +222 -type f
+$ find . -perm -002 -type f -ls
+</code></pre>
+<h2 id="finding-files-by-date-and-time">Finding files by date and time</h2>
+<ul>
+<li>changed in past 10 minutes: <code>$ find /etc/ -mmin -10</code></li>
+<li>changed in the past three days: <code>$ find /bin /usr/bin /sbin /usr/sbin -ctime -3</code></li>
+<li>have not been accessed in more than 300 days: <code>$ find /var/ftp /var/www -atime +300</code></li>
+</ul>
+<p>The time options (-atime, -ctime, and -mtime)  based on the number of days</p>
+<p>The min options (-amin, -cmin, and -mmin) do the same in minutes.</p>
+<p>$ find /etc -iname iptables -exec echo "I found {}" \;</p>
+<pre><code>I found /etc/bash_completion.d/iptables
+I found /etc/sysconfig/iptables
+</code></pre>
+<p>$ find /usr/share -size +5M -exec du {} \; | sort -nr</p>
+<p>$ find /var/allusers/ -user joe -ok mv {} /tmp/joe/ \;</p>
+<p>-ok asks for confirmation</p>
+<h2 id="grep-command">grep command</h2>
+<pre><code>$ grep desktop /etc/services
+$ grep -i desktop /etc/services
+</code></pre>
+<p>To search for lines that don’t contain a selected text string, use the -v option.</p>
+<pre><code>$ grep -vi tcp /etc/services
+</code></pre>
+<p>-r : recursively</p>
+<p>-l : list filenames only</p>
+<pre><code class="language-shell">grep -rli peerdns /usr/share/doc/
+ip addr show | grep inet
+</code></pre>
+<h2 id="ssh-password-less-login">SSH Password-less login</h2>
+<ol>
+<li>Install OpenSSH on Server</li>
+</ol>
+<p>ex: sudo apt-get install openssh-server
+    sudo service ssh restart (or) sudo systemctl start ssh</p>
+<ol>
+<li>On client machine, generate ssh keys</li>
+</ol>
+<pre><code class="language-shell">  ssh-keygen -t rsa
+
+  ## Copy public key (id_rsa.pub) from client machine to server's authorized_keys.
+
+  ssh-copy-id &lt;username&gt;@&lt;ssh-server-ip&gt;
+
+  ssh-copy-id patrick@192.168.0.103
+
+  ##Now you can ssh without requiring to enter password:
+  ssh partrick@192.168.0.103
+</code></pre>
+<p>Note: Check configuration of SSH server in /etc/ssh/sshd_config file.</p>
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 QMETA
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>

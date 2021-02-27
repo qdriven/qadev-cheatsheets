@@ -1,0 +1,1170 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="自动化测试文档中心">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
+    
+    
+      
+        <title>Docker Commands - 自动化测试</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1655a90d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#e92063">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="pink" data-md-color-accent="pink">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="自动化测试" class="md-header__button md-logo" aria-label="自动化测试">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            自动化测试
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/qdriven/qmeta-md-docsites/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qdriven/qmeta-md-docsites
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="自动化测试" class="md-nav__button md-logo" aria-label="自动化测试">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    自动化测试
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/qdriven/qmeta-md-docsites/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    qdriven/qmeta-md-docsites
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        QuickStart
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="QuickStart" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          QuickStart
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/project_structure/" class="md-nav__link">
+        项目结构和配置
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/selenium_in_a_wild_way/" class="md-nav__link">
+        WEB页面自动化-SELENIUM管理页面元素
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/webui_automation_quickstart/" class="md-nav__link">
+        WEB页面自动化-开始
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/webui_automation_realexample/" class="md-nav__link">
+        WEB页面自动化-真实用例
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/APIAutomation/" class="md-nav__link">
+        API 自动化测试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/api_testing_qa/" class="md-nav__link">
+        API 自动化测试常见问题
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity_automation/activity_automation_defined_employees/" class="md-nav__link">
+        工作流测试之指定审批节点
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activity_automation/activity_automation_dynamic/" class="md-nav__link">
+        工作流测试之动态审批节点
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        自动化测试模块介绍
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="自动化测试模块介绍" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          自动化测试模块介绍
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/automation-purpose/" class="md-nav__link">
+        目的
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro/automation-framework-impl/" class="md-nav__link">
+        基本模块的作用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/self_defined_elements/" class="md-nav__link">
+        页面自动化-页面元素的使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/element_handler/" class="md-nav__link">
+        页面自动化-页面元素方法查询
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/pageobject_codegenerator/" class="md-nav__link">
+        页面自动化-页面代码生成
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../webui_automation/build_test/" class="md-nav__link">
+        页面自动化-WebTestActionBuilder
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        接口自动化测试
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="接口自动化测试" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          接口自动化测试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/web%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/" class="md-nav__link">
+        接口测试－WEB接口常见的实现方法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/APIAutomation/" class="md-nav__link">
+        API 自动化测试
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api_automation/API%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95-%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        API自动化测试-进阶
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Tips
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tips" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Tips
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebTest_Debug/" class="md-nav__link">
+        WebUI Debug
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/find_by_ref/" class="md-nav__link">
+        FindByRef annotation  使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/verification_annotation/" class="md-nav__link">
+        verification 注解使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/code_style/" class="md-nav__link">
+        JAVA 自动化测试代码规范
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../best_practice/simple_ui_case/" class="md-nav__link">
+        一个简单测试用例的自动化实例
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/Database/" class="md-nav__link">
+        数据库操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/testng-xml-configuration/" class="md-nav__link">
+        TestNG 测试XML配置
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/use_own_password/" class="md-nav__link">
+        使用自己的用户名和密码获取万能密码
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/JsonHelper/" class="md-nav__link">
+        JSON处理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/page_object/" class="md-nav__link">
+        Page Object/Page Factory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/TreeElement/" class="md-nav__link">
+        TreeElement 使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebDriverHelper/" class="md-nav__link">
+        添加了Expectation的WebDriver操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/WebDriver%E6%93%8D%E4%BD%9C/" class="md-nav__link">
+        WebDriver原生操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/how_to_write_teststeps/" class="md-nav__link">
+        编写测试步骤的不同方法
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/repeatable_elements/" class="md-nav__link">
+        重复填写控件使用
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/StateElementReferneceException/" class="md-nav__link">
+        StateElementReferneceException
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/DateHelper/" class="md-nav__link">
+        DateHelper
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/database_assetion/" class="md-nav__link">
+        数据库验证
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/database_update/" class="md-nav__link">
+        预设条件数据的更新和回滚
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/testng_faq/" class="md-nav__link">
+        TestNG测试常见问题
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/simplest_testngreport/" class="md-nav__link">
+        TestNG 定制报表简单原理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/PageFactory/" class="md-nav__link">
+        Page Factory 模式原理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/random_data/" class="md-nav__link">
+        随机数据
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/data_construct_by_context/" class="md-nav__link">
+        动态测试数据构建
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Git
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git_basic/" class="md-nav__link">
+        Git 基础
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-basics" class="md-nav__link">
+    Docker basics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startstoppauserestart-a-container" class="md-nav__link">
+    Start/Stop/Pause/Restart a container:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    获取 Docker Container 信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-image" class="md-nav__link">
+    创建Docker Image
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-instructions" class="md-nav__link">
+    Docker Instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-cleanup" class="md-nav__link">
+    Docker cleanup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+  
+  
+    <div id="bsa-cpc"></div>
+  
+  
+                
+                  <a href="https://qdriven.github.io/qmeta-md-docsites/1-testops/2-docker.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="docker-commands">Docker Commands</h1>
+<h2 id="docker-basics">Docker basics</h2>
+<p>启动docker并进入container内部: </p>
+<p><code>docker run -i -t ubuntu:latest /bin/bash</code></p>
+<ul>
+<li>Detach from a container: <code>Ctrl + P Ctrl + Q</code></li>
+<li>Start a container in detached mode: <code>docker run -d ubuntu:16.04 /bin/bash</code></li>
+<li>View logs of a container: <code>docker logs ContainerId</code></li>
+</ul>
+<h2 id="startstoppauserestart-a-container">Start/Stop/Pause/Restart a container:</h2>
+<ul>
+<li><code>docker start ContainerID</code></li>
+<li><code>docker stop ContainerID</code></li>
+<li><code>docker restart ContainerID</code></li>
+<li><code>docker pause ContainerID</code></li>
+<li><code>docker unpause ContainerID</code></li>
+</ul>
+<h2 id="docker-container">获取 Docker Container 信息</h2>
+<ul>
+<li>List running containers: <code>docker ps</code></li>
+<li>List all containers: <code>docker ps -a</code></li>
+<li>List only container ids: <code>docker ps -aq</code></li>
+<li>List container ids not running: <code>docker ps -aq -f status=exited</code></li>
+<li>Delete a container: <code>docker rm containerId</code></li>
+<li>Delete all stopped containers:<ul>
+<li><code>docker rm $(docker ps -aq status=exited)</code></li>
+<li><code>docker rm | xargs docker ps -aq -f status=exited</code>  </li>
+<li><code>docker container prune</code></li>
+</ul>
+</li>
+<li>Automatically remove container once stopped: <code>docker run -i -t --rm ubuntu:16.04 /bin/bash</code></li>
+<li>Commit changes in a docker container: <code>docker commit ContainerID username/repository</code></li>
+</ul>
+<h2 id="docker-image">创建Docker Image</h2>
+<ul>
+<li>Build an image using Dockerfile: <code>docker build -t qmeta/myapp:1.0 .</code></li>
+<li>Build an image using different Dockerfile name: </li>
+</ul>
+<p><code>docker build -t busyboxplus:1.0 -f ./myfolder/MyDockerFile</code></p>
+<p>View layers of a container: <code>docker history ContainerId</code></p>
+<p><strong>Sample Dockerfile</strong></p>
+<pre><code># A basic apache server. To use either add or bind mount content under /var/www
+FROM ubuntu:latest
+
+LABEL maintainer=&quot;patrick@mail.com&quot;
+
+RUN apt-get update &amp;&amp; apt-get install -y apache2 &amp;&amp; \ 
+    apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+
+EXPOSE 80
+
+CMD [&quot;/usr/sbin/apache2&quot;, &quot;-D&quot;, &quot;FOREGROUND&quot;]
+</code></pre>
+<h2 id="docker-instructions">Docker Instructions</h2>
+<p><strong>FROM</strong> : Docker的Base Image</p>
+<p><code>FROM &lt;image&gt;[:&lt;tag&gt;|@&lt;digest&gt;]</code></p>
+<p><code>FROM ubuntu:latest</code></p>
+<p><strong>COPY</strong>: 从本地复制到docker image中</p>
+<p><code>COPY &lt;src&gt; ... &lt;dst&gt;</code></p>
+<p><code>COPY html /var/www/html</code></p>
+<p><code>COPY httpd.conf magic /etc/httpd/conf/</code></p>
+<p><strong>ADD</strong>: The ADD instruction copies new files, directories or remote file URLs from <code>&lt;src&gt;</code> and adds them to the filesystem of the image at the path <code>&lt;dest&gt;</code>.</p>
+<p><code>ADD &lt;src&gt; ... &lt;dst&gt;</code></p>
+<p><code>ADD web-page-config.tar /</code></p>
+<p><strong>ENV</strong>: 环境变量名称和参数.</p>
+<p><code>ENV &lt;key&gt; &lt;value&gt;</code></p>
+<p><code>ENV DEBUG_LVL 3</code></p>
+<p><code>ENV APACHE_LOG_DIR /var/log/apache</code></p>
+<p><strong>WORKDIR</strong> : The WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it in the Dockerfile. If the WORKDIR doesn’t exist, it will be created even if it’s not used in any subsequent Dockerfile instruction.</p>
+<p><code>WORKDIR &lt;dirpath&gt;</code></p>
+<p><code>WORKDIR /var/log</code></p>
+<p><strong>EXPOSE</strong>: The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime.</p>
+<p><code>EXPOSE &lt;port&gt;[/&lt;proto&gt;] [&lt;port&gt;[/&lt;proto&gt;]...]</code></p>
+<p><code>EXPOSE 8080 8787</code></p>
+<p><strong>LABEL</strong>: The LABEL instruction adds metadata to an image. A LABEL is a key-value pair.</p>
+<p><code>LABEL &lt;key-1&gt;=&lt;val-1&gt; &lt;key-2&gt;=&lt;val-2&gt; ... &lt;key-n&gt;=&lt;val-n&gt;</code></p>
+<p><code>LABEL version="2.0" release-date="2016-08-05"</code></p>
+<p><strong>RUN</strong> The <code>RUN</code> command executes during build time.</p>
+<p><code>RUN &lt;command&gt;</code> (or) <code>RUN ["&lt;exec&gt;", "&lt;arg-1&gt;", ..., "&lt;arg-n&gt;"]</code></p>
+<ul>
+<li><code>RUN echo "echo Welcome to Docker!" &gt;&gt; /root/.bashrc</code></li>
+<li><code>RUN ["bash", "-c", "rm", "-rf", "/tmp/abc"]</code></li>
+</ul>
+<p><strong>CMD</strong>: The CMD is to provide defaults for an executing container and runs when container starts. There can only be one CMD instruction in a Dockerfile. If you list more than one CMD then only the last CMD will take effect.</p>
+<p><code>CMD &lt;command&gt;</code> (or) <code>CMD ["&lt;exec&gt;", "&lt;arg-1&gt;", ..., "&lt;arg-n&gt;"]</code> (or) <code>CMD ["&lt;arg-1&gt;", ..., "&lt;arg-n&gt;"]</code></p>
+<p>//Dockerfile to demonstrate the behavior of CMD</p>
+<pre><code>FROM busybox:latest
+MAINTAINER Siva &lt;sivaprasadreddy.k@gmail.com&gt;
+CMD [&quot;echo&quot;, &quot;Dockerfile CMD demo&quot;]
+</code></pre>
+<p><code>&gt; docker build -t cmd-demo .</code></p>
+<p><code>&gt; sudo docker run cmd-demo</code></p>
+<p><strong>Output</strong> : Dockerfile CMD demo</p>
+<p><code>&gt; sudo docker run cmd-demo echo Override CMD demo</code></p>
+<p><strong>Output</strong> : Override CMD demo</p>
+<p><strong>ENTRYPOINT</strong>: An ENTRYPOINT allows you to configure a container that will run as an executable.</p>
+<p><code>ENTRYPOINT &lt;command&gt;</code> (or) <code>ENTRYPOINT ["&lt;exec&gt;", "&lt;arg-1&gt;", ..., "&lt;arg-n&gt;"]</code></p>
+<p>Only the last ENTRYPOINT instruction will be effective.</p>
+<p>//Dockerfile to demonstrate the behavior of ENTRYPOINT</p>
+<pre><code>FROM busybox:latest
+ENTRYPOINT [&quot;echo&quot;, &quot;Dockerfile ENTRYPOINT demo&quot;]
+</code></pre>
+<p><code>&gt; sudo docker build -t entrypoint-demo .</code></p>
+<p><code>&gt; sudo docker run entrypoint-demo</code></p>
+<p><strong>Output</strong> : Dockerfile ENTRYPOINT demo</p>
+<p><code>&gt; sudo docker run entrypoint-demo with additional arguments</code></p>
+<p><strong>Output</strong> : Dockerfile ENTRYPOINT demo with additional arguments</p>
+<p><code>&gt; sudo docker run -it --entrypoint="/bin/sh" entrypoint-demo</code></p>
+<p><strong>Output</strong> : /#</p>
+<p><strong>HEALTHCHECK</strong>: The <code>HEALTHCHECK</code> instruction tells Docker how to test a container to check that it is still working.</p>
+<p><code>HEALTHCHECK [&lt;options&gt;] CMD &lt;command&gt;</code></p>
+<p>Only the last HEALTHCHECK instruction will take effect.</p>
+<p><code>HEALTHCHECK --interval=5m --timeout=3s CMD curl -f http://localhost/ || exit 1</code></p>
+<p><strong>Push image to DockerHub</strong></p>
+<p><code>$ docker images -a</code></p>
+<p><code>$ docker login</code></p>
+<p>Username: your-name</p>
+<p>Password: my_password</p>
+<ul>
+<li><code>docker push sivaprasadreddy/myapp</code></li>
+</ul>
+<p>Delete Image</p>
+<ul>
+<li><code>docker rmi sivaprasadreddy/myapp</code></li>
+</ul>
+<h2 id="docker-cleanup">Docker cleanup</h2>
+<p>Delete volumes</p>
+<ul>
+<li><code>docker volume rm $(docker volume ls -qf dangling=true)</code></li>
+<li><code>docker volume ls -qf dangling=true | xargs -r docker volume rm</code></li>
+</ul>
+<p>Delete networks</p>
+<ul>
+<li><code>docker network ls</code></li>
+<li><code>docker network ls | grep "bridge"</code></li>
+<li><code>docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')</code></li>
+<li><code>docker network prune</code></li>
+</ul>
+<p>Remove docker images</p>
+<ul>
+<li><code>docker images</code></li>
+<li><code>docker rmi $(docker images -q)</code> //delete all images</li>
+<li><code>docker rmi $(docker images --filter "dangling=true" -q --no-trunc)</code></li>
+<li><code>docker images | grep "none"</code></li>
+<li><code>docker rmi $(docker images | grep "none" | awk '/ / { print $3 }')</code></li>
+</ul>
+<p>Remove docker containers</p>
+<ul>
+<li><code>docker ps -a</code></li>
+<li><code>docker kill $(docker ps -q)</code></li>
+<li><code>docker rm $(docker ps -qa --no-trunc --filter "status=exited")</code></li>
+</ul>
+<p>Docker System Prune</p>
+<pre><code>$ docker system prune -a
+
+WARNING! This will remove:
+    - all stopped containers
+    - all volumes not used by at least one container
+    - all networks not used by at least one container
+    - all images without at least one container associated to them
+Are you sure you want to continue? [y/N] y
+</code></pre>
+<p>Resize disk space for docker vm</p>
+<ul>
+<li><code>docker-machine create --driver virtualbox --virtualbox-disk-size "40000" default</code></li>
+</ul>
+                
+              
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2021 QMETA
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
+      
+    
+  </body>
+</html>

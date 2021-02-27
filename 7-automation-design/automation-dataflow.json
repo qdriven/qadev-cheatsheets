@@ -1,0 +1,26 @@
+{
+  "testSuiteName": "string",
+  "id": "string",
+  "globalParams": {},
+  "testCases": [
+    {
+      "testCase": {
+        "id": "string",
+        "testCaseName": "string",
+        "caseParams": {},
+        "context": {},
+        "testSteps": [
+          {
+            "name": "string",
+            "beforeActions": [],
+            "afterActions": [],
+            "action":{
+              "api": {},
+              "params": {}
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
