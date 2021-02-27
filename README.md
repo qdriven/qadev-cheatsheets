@@ -11,12 +11,18 @@ This Demo Site is a Test Framework Site 5 years ago, It is still good enough to 
 ### Personal Slides
 
 - [Shell4QA](./slides/shell4qa.html.pdf)
+- [Mainnet Automation States](./slides/主网自动化优化.pptx)
 
 ### Reports:
 
 - [TestAutomation-Tools](./slides/Test_Automation_Tools_Report.pdf)
 - [gitkraken-devops-report](./slides/gitkraken-devops-report-2020.pdf)
 
+
+### More Slides
+
+- [OWASP_Code_Review_Guide_v2.pdf](./slides/OWASP_Code_Review_Guide_v2.pdf)
+- [atlassian-git-cheatsheet.pdf](./slides/atlassian-git-cheatsheet.pdf)
 
 ## TO DO List
 
